@@ -30,6 +30,9 @@ Style/ClassAndModuleChildren:
 Style/Documentation:
   Enabled: false
 
-# Line is too long.
 Metrics/LineLength:
   Max: 128
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
