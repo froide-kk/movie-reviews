@@ -1,0 +1,35 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - db/schema.rb
+
+Rails:
+  Enabled: true
+
+Style/EmptyMethod:
+  Exclude:
+    - app/controllers/*
+
+Style/AndOr:
+  Exclude:
+    - app/controllers/*
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Exclude:
+    - spec/**/*
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+# Line is too long.
+Metrics/LineLength:
+  Max: 128
