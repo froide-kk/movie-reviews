@@ -10,5 +10,10 @@
   <%= @movie.rating %>
 </p>
 
+<p>
+  <strong>Tag:</strong>
+  <%= @movie.tags_names %>
+</p>
+
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

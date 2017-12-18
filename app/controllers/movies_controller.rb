@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: %i[show edit update destroy]
 
   def index
-    @movies = Movie.all.order(rating: :desc)
+    @movies = Movie.all.includes(:tags).order(rating: :desc)
   end
 
   def show
@@ -39,6 +39,6 @@ class MoviesController < ApplicationController
   end
 
   def movie_params
-    params.require(:movie).permit(:name, :rating)
+    params.require(:movie).permit(:name, :rating, tag_ids: [])
   end
 end
